@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/my-style.css">
+</head>
+<body>
+	<!-- 导航栏 -->
+	<header>
+		<nav class="navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="index.html">
+		        <img alt="LOGO" src="img/50x30.png">
+		      </a>
+				</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-left">
+						<li><a href="#">首页</a></li>
+	          <li><a href="lawyer.html">法律人</a></li>
+	          <li><a href="low-product.html">法律产品</a></li>
+	          <li><a href="law-knowledge.html">法律知识</a></li>
+	          <li><a href="#">招聘</a></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a class="add-btn">法律人入驻<span class="caret"></span></a></li>
+	          <li class="cur"><a href="login.html">登录</a></li>
+	          <li><a href="register.html">注册</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- 登录区 -->
+	<section>
+		<div class="container">
+			<div class="row" style="margin-top:50px;">
+				<div class="col-md-6 col-sm-6 text-center hidden-xs">
+					<img class="login-bg-img" style="margin-top:25px;" src="img/400x400.png" alt="">
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12 text-center">
+					<div class="login-box center-block">
+						<div class="login-center">
+							<h1>账户登录</h1>
+							<p class="p-liner">使用滴法账号登录</p>
+							<form action="" method="post">
+								<input class="input-default" type="text" placeholder="请输入手机号或邮箱" name="user" /></br>
+								<input class="input-default" type="password" placeholder="请输入密码" name="password" /></br>
+								<a class="forget" href="#">忘记密码?</a>
+								<input class="btn-large" type="button" value="登&nbsp;&nbsp;录" style="	margin-bottom: 20px;">
+								<p class="p-liner">使用社交账号登录</p>
+								<div class="row">
+									<div class="col-sm-12 col-xs-12 text-center">
+										<a class="img-circle weixin" href="#" title="使用微信登录"></a>
+										<a class="img-circle sina" href="#" title="使用新浪登录"></a>
+										<a class="img-circle qq" href="#" title="使用QQ登录"></a>
+									</div>
+								</div>
+								<a class="reg-url" href="#">还没有账号?<b>立即注册</b></a>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

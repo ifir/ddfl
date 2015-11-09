@@ -1,0 +1,1023 @@
+/* ==========================================导航栏 ======================================*/
+html,body{
+	width: 100%;
+	height: 100%;
+	background:#f5f5f5;
+}
+h1,h2,h3,h4,h5,h6{
+	color: #222;
+}
+a:link, a:hover, a:active{
+	text-decoration: none;
+}
+p, ul a{
+	color: #222;
+}
+ul{
+	margin-bottom: 0;
+	list-style-type:none;
+}
+hr{
+	position: relative;
+	margin: 10px 0;
+	z-index: 10;
+}
+.dotted{
+	border: none;
+	border-bottom: 1px dotted #ccc;
+}
+.clear-padding{
+	padding-left:0;
+	padding-right: 0;
+}
+.clear-padding-left{
+	padding-left:0;
+}
+.clear-padding-right{
+	padding-right: 0;
+}
+.navbar-inverse .navbar-nav>li>a, 
+.navbar-inverse .navbar-nav>li.cur:hover a, 
+.nav>li>a.add-btn, 
+.nav>li>a.add-btn .caret, 
+.btn-black, .btn-large, 
+.forget:hover, 
+.reg-url b{
+	-webkit-transition:all 1s ease;
+	-moz-transition:all 1s ease;
+	-ms-transition:all 1s ease;
+	-o-transition:all 1s ease;
+	transition:all 1s ease;
+}
+.navbar-brand{
+	padding:10px;
+}
+.navbar{	
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	border:0;
+	margin-bottom: 0;
+	font-size: 1em;
+}
+.navbar-inverse .navbar-nav>li>a, 
+.navbar-inverse .navbar-nav>li.cur:hover a{
+	color:#fff;
+	text-align: center;
+}
+.navbar-inverse .navbar-nav>li:hover a{
+	color:#ff3131;
+}
+.cur{
+	background: #ff0000;
+}
+.nav>li{
+	text-align: center;
+}
+.nav>li>a.add-btn{	
+	display: inline;
+	cursor: pointer;
+	border:1px solid #fff;
+	line-height: 50px;
+	padding: 5px 10px;
+	margin: 0 15px;	
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}
+.navbar-inverse .navbar-nav>li:hover>a.add-btn{
+	border:1px solid #ff3131;
+}
+.nav>li>a.add-btn:hover .caret{
+	-webkit-transform:rotate3d(0, 0, 1, 180deg);
+	-moz-transform:rotate3d(0, 0, 1, 180deg);
+	-ms-transform:rotate3d(0, 0, 1, 180deg);
+	-o-transform:rotate3d(0, 0, 1, 180deg);
+	transform:rotate3d(0, 0, 1, 180deg);
+	color: #ff3131;
+}
+/* ======================================banner =======================================*/
+.container-banner{
+	background: url('../img/bg1.jpg') 0 0 no-repeat;
+	background-size: cover;
+	position: relative;
+	min-height: 400px;
+	width: 100%;
+	padding-top: 300px;
+	text-align: center;
+}
+.btn-black{
+	padding: 5px 15px;
+	font-size: 1.5em;
+	background: #222;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	color:#fff;
+	border: 1px solid #222;
+	text-align: center;
+}
+.btn-black:first-child{
+	margin-right: 25px;
+}
+.btn-black:link{
+	color: #fff;
+}
+.btn-black:hover{
+	color: #fff;
+	border: 1px solid #fff;
+}
+/* ==================================topic===================================== */
+.topic-img{	
+	position: relative;
+	line-height: 40px;
+	font-size: 1.3em;
+	color: #222;
+	text-align: center;
+	font-weight: bolder;
+}
+.state{
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	left: 110px;
+	font-size: .9em;
+	color: #fff;
+	width: 40px;
+	height: 20px;
+	background: #222;
+	text-align: center;
+	line-height: 20px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	font-weight: normal;
+}
+.topic-img:before, .topic-img:after{
+	content: '';	
+	width: 5px;
+	height: 20px;	
+	position: absolute;
+	top:0;	 
+	background: #222;
+}
+.topic-img:before{
+	left: -15px;
+}
+.topic-img:after{
+	right: -15px;
+}
+.navbar-topic{
+	overflow: hidden;
+	list-style: none;
+	font-size: 1em;
+	float: right;
+	margin-right: -30px;
+}
+.navbar-topic>li{
+	float: left;
+	line-height: 50px;
+	padding: 0 15px;
+}
+.navbar-topic>li>a{
+	color: #676767;
+}
+.navbar-topic>li>a:hover{ 
+	color: #222;
+}
+/* ====================== topic picture========================== */
+.row-pic a{
+	display: inline-block;
+	position: relative;
+}
+.row-pic a span{
+	display: block;
+	position: absolute;	
+	left: 0;
+	bottom:0;
+	width: 100%;
+	height: 40px;
+	background: #222;
+	z-index: 100;
+	line-height: 40px;
+	color: #fff;
+	font-size: 1.5em;
+	text-align: center;
+	opacity:.65;
+	filter:alpha(opacity:65);
+	font-weight: bolder;
+}
+
+.pic-grids img{
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+/* ================================feature topic2============================= */
+.feature{
+	width: 100%;
+	height: auto;
+	margin: 10px 0;
+	padding: 10px 0;
+}
+.feature-grids{
+	text-align: center;
+}
+.feature-grids p{
+	font-size: 1.6em;
+	color: #222;
+	padding: 10px 0;
+	font-weight: bolder;
+}
+.text-right>a{
+	color: #676767;
+	font-size: 1em;
+	line-height: 50px;
+}
+.text-right>a:hover{
+	color: #222;
+}
+
+/* =================================footer================================== */
+.nav-li1{
+	width: 100%;
+	height: 30px;
+	background: #222;
+}
+.nav-li1 ul li{
+	float: left;
+	width: 33.333333%;
+	color: #fff;
+	line-height: 30px;
+	font-weight: bolder;
+	font-size: 1em;
+}
+.nav-li2{
+	width: 550px;
+	padding: 10px 0;
+}
+.nav-li2 ul li{
+	float: left;
+	width: 25%;	
+	font-size: 1em;	
+}
+.nav-li2 ul li:first-child, 
+.nav-li2 ul li:nth-child(2), 
+.nav-li2 ul li:nth-child(3){
+	border-right: 1px solid #777;
+}
+.nav-li2 a{
+	color: #777;
+}
+.footer p{
+	font-size: .9em;
+	margin: 10px 0;
+}
+
+
+/* ================================合同下载 ===============================*/
+.low-download .media{
+	background:#F0EFEF;
+	height: 120px;
+	padding-left: 15px;
+}
+.low-download .media-heading{
+	/* line-height: 120px; */
+	padding: 50px 0;
+	font-size: 1.2em;
+	color: #222;
+	font-weight: bolder;
+}
+
+/* ==============================登陆、注册页面======================== */
+.login-box{
+	width: 398px;
+	height: 448px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+.login-bg-img{
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+}
+.login-center{
+	width: 90%;
+	height: 400px;
+	margin: 25px 15px;
+}
+.login-center>h1{
+	color: #222;
+	font-size: 1.5em;
+}
+.p-liner{
+	color: #ccc;
+	font-size: .9em;
+	position: relative;
+}
+.p-liner:before, .p-liner:after{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100px;
+	height: 1px;
+	background-color: #ccc;
+	top: 8px;
+}
+.p-liner:before{
+	left: 0;
+}
+.p-liner:after{
+	right: 0;
+}
+.input-default{
+	width: 100%;
+	height: 45px;
+	border:1px solid #ccc;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	margin-bottom: 10px;
+	outline: none;
+	padding-left: 40px;
+}
+.input-default:focus{
+	border-color: #66afe9;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+.btn-large{
+	display: inline-block;
+	padding: 6px 12px;
+	font-weight: 400;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	color: #fff;
+	background-color: #222;
+	border: 2px solid #fff;
+	width: 100%;
+	font-size: 1.4em;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	outline: none;
+}
+.btn-large:hover{
+	color: #fff;
+	background-color: #222;
+	border: 2px solid #222;
+}
+.forget{
+	font-size: .95em;
+	color: #FF6B00;
+	float: right;
+	line-height: 30px;
+}
+.forget:hover{
+	color: #F0480B;
+}
+.weixin, .sina, .qq{
+	display: inline-block;
+	background: url('../img/50x50.png') center center no-repeat;
+	background-size: 50px 50px;
+	width: 50px;
+	height: 50px;
+	margin: 10px;
+}
+.reg-url{
+	font-size: 1em;
+	color: #777;
+}
+.reg-url b{
+	color: #222;
+}
+.reg-url:hover b{
+	color: #42CA38;
+}
+.yzm-group{
+	width: 100%;
+	overflow: hidden;
+}
+.yzm-group .pull-left{
+	width: 70%;
+}
+.yzm-group .pull-right{
+	width: 29%;
+}
+.btn-yzm{
+	font-size: 1.1em;
+	height: 45px;
+}
+/* =============================法律产品======================= */
+.product-box{
+	display: block;
+	width: 100%;	
+	max-width: 260px;
+	height: auto;
+	border: 1px solid #ccc;
+	margin:0 auto 10px auto;
+}
+.product-box img{
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	margin: 10px 0;
+}
+.title-box{
+	width: 90%; 
+	color:#222;
+	padding-bottom: 10px;
+}
+.title-box>h2{
+	margin: 0;
+	font-size: 1.3em;
+	font-weight: bolder;
+}
+.title-box>a{
+	font-size: 1em;
+	color:#222;
+}
+
+/* =============================法律产品详情======================= */
+.pro-title{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom:20px;
+}
+.pro-title p{
+	display: inline;
+	margin-right: 15px;
+}
+.pro-detail-box{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	background: #fff;
+}
+.sidebar-box{
+	width: 260px;
+	height: auto;	
+	border: 1px solid #C8C8C8;
+	background: #fff;
+	margin-left:1px; 
+	margin-top: 15px;
+	padding:15px 10px;
+}
+.sidebar-box .form-group{
+	margin-bottom: 5px;
+}
+.sidebar-box h3{
+	font-size: 1.5em;
+	font-weight: bolder;
+	color: #222;
+	margin: 0;
+}
+.sidebar-box .hr:before{
+	content: '';
+	position: absolute;
+	display: block;
+	left: 0;
+	top: -3px;
+	width: 30px;
+	height: 6px;
+	background: #4BA6F5;
+	z-index: 12;
+}
+.sidebar-box label{
+	font-size: .9em;
+}
+.sidebar-box p b{
+	color: red;
+	font-size: 1.4em;
+	font-weight: bolder;
+	padding-left: 10px;
+}
+.sidebar-box p i{
+	color: #777;
+	font-size: 1em;
+	font-weight: bolder;
+	padding-left: 10px;
+	position: relative;
+}
+.sidebar-box p i:after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 8px;
+	left: 5px;
+	width: 80px;
+	height: 1px;
+	background-color: #ff0000;
+}
+.btn-primary{
+	color: #fff;
+	background-color: #5FA9DA;
+	border-color: #4BA6F5;
+}
+.btn-primary:hover{
+	color: #fff;
+	background-color: #3E8ED2;
+	border-color: #4BA6F5;
+}
+/* ==============================法律人=========================== */
+.lawyer .media{
+	border-bottom:1px solid #ccc;
+	padding-bottom: 10px;
+}
+.lawyer .media-heading{
+	color: #222;
+	display: inline-block;
+}
+
+.media-content{
+	height: 47px;
+}
+.lawyer i{
+	color: #ff0000;
+	font-size: 1.2em;
+	margin-left: 20px;
+}
+.media-content span{
+	margin: 10px 20px 10px 0;
+	line-height: 50px;
+	color:#777;
+}
+.media-content label{
+	display: inline-block;
+	padding: 0 10px;
+	background-color: #ff0000;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	color: #fff;
+	margin-top: 20px;
+}
+.btn-square{
+	display: block;
+	width: 120px;
+	height: 120px;
+	background-color: #5FA9DA;
+	color: #fff;
+	text-align: center;
+	line-height: 120px;
+	font-size: 1.5em;
+	font-weight: bolder;
+}
+.btn-square:hover{
+	color: #fff;
+}
+.lawyer .sidebar-box{
+	width: 100%;
+	min-width: 360px;
+}
+.lawyer .sidebar-box h4{
+	font-weight: bolder;
+	position: relative;
+	padding-left: 10px;
+}
+.lawyer .sidebar-box h4:before{
+	content: '';
+	display: block;
+	width: 5px;
+	height: 17px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #ff0000;
+}
+/* =============================法律人详情========================== */
+.tab-title{
+	width: 100%;
+	height: 50px;
+}
+.tab-title span{
+	float: left;
+}
+.tab-title span:first-child{
+	display: inline-block;
+	border-top: 2px solid green;
+	color: green;
+	font-size: 1.5em;
+	padding: 0 20px;
+	line-height: 50px;
+	background: #fff;
+}
+.tab-title span:last-child{
+	display: inline-block;
+	background: #E4E4E4;
+	color: #777;
+	font-size: 1.2em;
+	padding: 0 20px;
+	line-height: 50px;
+	width:90%;
+	width: -webkit-calc(100% - 82px);
+	width: -moz-calc(100% - 82px);
+	width: calc(100% - 82px);	
+}
+.lawyer-detail-box{
+	width: 98%;
+	overflow: hidden;
+	border-top: 2px solid #ff0000;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #fff;
+	min-height: 256px;
+}
+.lawyer-detail-box h5, .sidebar-box h5{
+	font-weight: bold;
+	position: relative;
+	padding: 0 15px;
+	margin-left: 10px;
+}
+.lawyer-detail-box h5:before, .sidebar-box h5:before{
+	content: '';
+	position: absolute;
+	width: 5px;
+	height: 14px;
+	background: #ff0000;
+	left: 0;
+	top: 0;	
+}
+.lawyer-detail-box > p{
+	padding: 0 10px;
+	text-indent: 28px;
+}
+.page-header{
+	margin: 10px 0;
+}
+.req-box{
+	width: 100%;
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+.req-info{
+	width: 100%;
+	overflow: hidden;
+}
+.req-icon{
+	width: 30px;
+}
+.req-con{
+	width: 95%;
+	width: -webkit-calc(100% - 30px);
+	width: -moz-calc(100% - 30px);
+	width: calc(100% - 30px);
+}
+.req-icon span{
+	margin-right: 10px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #222;
+	color: #fff;
+	text-align: center;
+	line-height: 20px;
+	font-size: 1em;
+}
+.req-box div:nth-child(2) .req-icon span{
+	background-color: #ff0000;
+}
+.req-con p{
+	font-size: 1em;
+}
+
+/* =============================法律知识========================== */
+.container-lawknow-banner{
+	background: url('../img/bg2.jpg') 0 0 no-repeat;
+	background-size: cover;
+	position: relative;
+	min-height: 400px;
+	width: 100%;
+	padding-top: 300px;
+	text-align: center;
+}
+.lawknow-con{
+	margin-top: 20px;
+}
+.lawknow-con .media{
+	background-color: #eee;
+	padding: 5px;
+}
+.lawknow-con .media-heading{
+	font-weight: bolder;
+	color: #5bc0de;
+	margin: 10px 0;
+}
+.lawknow-con .media-body p{
+	font-size: .8em;
+}
+.lawknow-con .caption a{
+	color: #777;
+}
+.lawknow-con .caption a:hover{
+	color: #FFC373;
+}
+/* ===========================法律知识详情======================== */
+.sidebar-detail-box{
+	width: 100%;
+	border-top: 2px solid #222;
+	margin-top: 0;
+}
+.sidebar-detail-box h2{
+	margin-top:0;
+}
+.msgs-box{
+	border-bottom: 1px dotted #ccc;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+.msgs-box h3{
+	font-weight: normal;
+	margin: 5px 0;
+}
+.msgs-box span{
+	color: #777;
+	margin-right: 15px;
+	font-size: .9em;
+}
+.msgs-box p{	
+	margin: 5px 0;
+	font-size: 1em;
+	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.sidebar-box .rank-list{
+	width: 100%;
+	padding-left: 10px;
+}
+.rank-list li{
+	padding: 5px 0;
+	font-size: 1em;
+}
+.rank-list li a{
+	color: #222;
+}
+.rank-list i{
+	color: #fff;
+	display: inline-block;
+	background-color: #ccc;
+	width: 15px;
+	height: 15px;
+	margin-right: 10px;
+	font-size: .9em;
+	text-align: center;
+	line-height: 15px;
+}
+.rank-list li:nth-child(1) i, 
+.rank-list li:nth-child(2) i, 
+.rank-list li:nth-child(3) i{
+	background-color: #222;
+}
+.rank-list li:nth-child(1) a{
+	color: #ff0000;
+}
+.sidebar-detail-box .pagination{
+	margin: 0 auto;
+}
+/* =============================法律人入驻========================== */
+.navbar-inverse .navbar-nav>.law-cur>a.add-btn{
+	border-color: #ff3131;
+}
+.nav>.law-cur>a.add-btn{
+	color:#ff3131;
+}
+.container-join-banner{
+	background: url('../img/bg3.jpg') 0 0 no-repeat;
+	background-size: cover;
+	position: relative;
+	min-height: 400px;
+	height: auto;
+	width: 100%;
+	padding-top: 300px;
+	text-align: center;
+}
+.law-reg-title{
+	font-weight: bolder;
+	position: relative;
+	padding-left: 20px;
+}
+.law-reg-title:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 5px;
+	height: 19px;
+	background-color: #222;
+}
+.form-horizontal{
+	position: relative;
+}
+.vertical-hr:after{
+	content: '';
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	background-color: #eee;
+	width: 1px;
+	height: 100%;
+}
+/* ==============================个人中心========================== */
+.sidebar-per-list{
+	border: 0;
+	width: 100%;
+}
+.per-list-ul li{
+	font-size: 1.2em;
+	line-height: 40px;
+}
+
+.per-list-ul li.list-cur a{
+	color: #ff0000;
+	font-weight: bolder;
+}
+.per-buy-ul{
+	position: relative;
+	overflow: hidden;
+}
+.per-buy-ul li{
+	float: left;
+	font-size: 1.5em;
+	padding: 5px 20px; 
+}
+.per-buy-ul li.list-buy-cur{
+	border-bottom: 4px solid #222; 
+}
+.per-buy-con{	
+	margin-top: 10px;
+	display: none;
+}
+.per-buy-con .col-md-12{
+	border-top: 1px dotted #ccc;
+	border-bottom: 1px dotted #ccc;
+	margin-bottom: 10px;
+}
+.per-buy-con p{
+	line-height: 40px;
+	margin-bottom: 0;
+	font-size: .9em;
+	color: #ccc;
+}
+.per-buy-con input{
+	margin-top: 3px;
+}
+.per-buy-con-cur{
+	display: block;
+}
+
+
+/* ==================================热门话题================================ */
+.tab-ul{
+	background-color: #E4E4E4;
+	height: 50px;
+	padding: 0; 
+}
+.tab-ul li{
+	float: left;
+	line-height: 50px;
+	padding: 0 30px;
+	font-size: 1.2em;
+	position: relative;	
+}
+.tab-ul li.tab-act{
+	background-color: #fff;
+}
+.tab-ul li a, .tab-ul li a:hover,{
+	color: #222;
+} 
+.tab-ul .tab-act:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 3px;
+	width: 100%;
+	background-color: #48B2FD;
+}
+.hot-topic-con{
+	margin-top: 20px;
+}
+.tab-topic-con{
+		display: none;
+}
+.tab-topic-con-info{
+	padding: 0 20px;
+	border-bottom: 1px dashed #ccc;
+}
+.tab-topic-con-info h4{
+	position: relative;
+	font-weight: bolder;
+}
+.tab-topic-con-info .label{
+	font-size: .7em;
+	vertical-align:middle;
+	margin-right: 5px;
+}
+.tab-topic-con-info .btn-xs{
+	text-align: right;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.tab-topic-con-info p{
+	text-overflow:ellipsis;
+	overflow: hidden;	
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	color: #5A5A5A;
+}
+.tab-topic-con-act{
+	display: block;
+}
+
+
+/* ===========================media媒体查询======================= */
+@media screen and (max-width: 400px){
+	.login-box{
+		width: 100%;
+		min-width: 300px;
+	}
+	.btn-yzm{
+		font-size: .8em;
+	}
+	.btn-large{
+		padding:6px 0;
+	}
+	.footer{
+		display: none;
+	}
+}
+@media screen and (max-width: 768px){
+	.center{
+		text-align: center;
+	}
+	.pic-grids{
+		margin: 5px;
+	}
+	.about-us-grids{
+		margin-bottom: 10px;
+	}
+	.nav-li2 ul li{
+		font-size: .9em;
+	}
+	.lawyer .media-heading{
+		color: #222;
+		display: inline-block;
+		font-size: 1em;
+	}
+
+	.media-content{
+		height: 47px;
+	}
+	.lawyer i{
+		color: #ff0000;
+		font-size: 1.2em;
+		margin-lef
+
+		t: 20px;
+	}
+	.media-content span{
+		display: block;
+		font-size: .9em;
+		line-height: 15px;
+		color:#777;
+		margin: 0;
+	}
+	.media-content label{
+		display: inline-block;
+		padding: 0 10px;
+		background-color: #ff0000;
+		-webkit-border-radius:10px;
+		-moz-border-radius:10px;
+		border-radius:10px;
+		color: #fff;	
+		font-size: .7em;
+		font-weight: normal;
+		margin-top: 0;
+	}
+	.btn-square{
+		display: none;
+	}
+	.vertical-hr:after{
+		display: none;
+	}
+}
+@media screen and (max-width: 992px){
+	.feature-grids{
+		margin-bottom: 10px;
+	}
+	.product-box{
+		margin: 5px auto;
+	}
+	.nav-li2{
+		width: 100%;		
+	}
+}
