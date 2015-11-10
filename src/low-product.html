@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/my-style.css">
 </head>
-<body style="background:#f5f5f5;">
+<body>
 	<!-- 导航栏 -->
 	<header>
 		<nav class="navbar navbar-inverse">
@@ -27,11 +27,11 @@
 				</div>
 				<div class="collapse navbar-collapse" id="navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-left">
-						<li><a href="#">首页</a></li>
+						<li><a href="javascript:;">首页</a></li>
 	          <li><a href="lawyer.html">法律人</a></li>
 	          <li class="cur"><a href="low-product.html">法律产品</a></li>
 	          <li><a href="law-knowledge.html">法律知识</a></li>
-	          <li><a href="#">招聘</a></li>
+	          <li><a href="javascript:;">招聘</a></li>
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right">
@@ -48,7 +48,66 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-sm-12 col-xs-12">
-					<img src="img" style="width:100%;height:300px;">
+					<div class="list-select-border">
+						<div class="list-select-box clearfix">
+							<div class="pull-left list-label">
+								<label>合同分类:</label>
+							</div>
+							<div class="pull-left list-select">
+								<ul class="list-select-ul clearfix" id="list-select-ul1">
+									<li class="selected"><a href="javascript:;">全部</a></li>
+									<li><a href="javascript:;">类型1</a></li>
+									<li><a href="javascript:;">类型2</a></li>
+									<li><a href="javascript:;">类型3</a></li>
+									<li><a href="javascript:;">类型4</a></li>
+									<li><a href="javascript:;">类型5</a></li>
+									<li><a href="javascript:;">类型6</a></li>
+									<li><a href="javascript:;">类型7</a></li>
+									<li><a href="javascript:;">类型1</a></li>
+									<li><a href="javascript:;">类型2</a></li>
+									<li><a href="javascript:;">类型3</a></li>
+									<li><a href="javascript:;">类型4</a></li>
+									<li><a href="javascript:;">类型5</a></li>
+									<li><a href="javascript:;">类型6</a></li>
+									<li><a href="javascript:;">类型7</a></li>
+									<li><a href="javascript:;">类型1</a></li>
+									<li><a href="javascript:;">类型2</a></li>
+									<li><a href="javascript:;">类型3</a></li>
+									<li><a href="javascript:;">类型4</a></li>
+									<li><a href="javascript:;">类型5</a></li>
+									<li><a href="javascript:;">类型6</a></li>
+									<li><a href="javascript:;">类型7</a></li>
+									<li><a href="javascript:;">类型1</a></li>
+									<li><a href="javascript:;">类型2</a></li>
+									<li><a href="javascript:;">类型3</a></li>
+									<li><a href="javascript:;">类型4</a></li>
+									<li><a href="javascript:;">类型5</a></li>
+									<li><a href="javascript:;">类型6</a></li>
+									<li><a href="javascript:;">类型7</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="list-select-box clearfix" id="list-select-box2" style="display:none;">
+							<div class="pull-left">
+								<label>合同细分:</label>
+							</div>
+							<div class="pull-left list-select">
+								<ul class="list-select-ul clearfix" id="list-select-ul2">
+									<li class="selected"><a href="javascript:;">全部</a></li>
+									<li><a href="javascript:;">类型1</a></li>
+									<li><a href="javascript:;">类型2</a></li>
+									<li><a href="javascript:;">类型3</a></li>
+									<li><a href="javascript:;">类型4</a></li>
+									<li><a href="javascript:;">类型5</a></li>
+								</ul>
+							</div>
+						</div>
+
+						
+						
+					</div>	
+
 				</div>
 			</div>
 			<div class="row" style="margin-top:20px;">
@@ -104,8 +163,9 @@
 						</div>
 					</div>
 				</a>
-			</div>
-			<div class="row">
+
+
+			
 				<a href="low-product-detail.html">
 					<div class="col-md-3 col-sm-6 col-xs-12">
 						<div class="product-box center-block">
@@ -161,11 +221,47 @@
 			</div>
 		</div>
 	</section>
-	
+
 
 
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			//一级菜单选择事件
+			$('#list-select-ul1 li').each(function(index){
+				$listNum = $('#list-select-ul1 li');
+				$listNum2 = $('#list-select-ul2 li');
+				$listBox = $('#list-select-box2');
+				$(this).click(function(){
+					_this = $(this);
+					$listNum.removeClass('selected');
+					_this.addClass('selected');
+					if(index == 0){
+						$listBox.hide();
+						$listNum2.removeClass('selected');
+						$listNum2.eq(0).addClass('selected');
+					}else{
+						//二级菜单显示
+						$listBox.show();
+						//二级菜单选择事件	
+						$('#list-select-ul2 li').each(function(index){
+							$listNum2 = $('#list-select-ul2 li');
+							$(this).click(function(){
+								__this = $(this);
+								$listNum2.removeClass('selected');
+								__this.addClass('selected');					
+							});	
+						});	
+					}
+				});	
+			});	
+
+			
+			
+		})
+	</script>
 </body>
 </html>

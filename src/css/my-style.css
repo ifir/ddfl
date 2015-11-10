@@ -412,6 +412,41 @@ hr{
 	height: 45px;
 }
 /* =============================法律产品======================= */
+.list-select-border{
+	border:1px solid #ccc;
+	padding:20px;
+	margin-top:10px;
+}
+.list-select-box label{
+	line-height: 40px;
+}
+.list-select-box .list-label{
+	width: 6%;
+}
+.list-select-box .list-select{
+	width: 94%;
+}
+.list-select-ul{
+	margin: 5px 0;
+	padding-left: 20px;
+}
+.list-select-ul li{
+	float: left;
+	padding:5px 10px;
+	margin: 0 5px;
+}
+
+.selected{
+	background-color: #ff0000;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}
+.selected a{
+	color: #fff;
+}
+
+
 .product-box{
 	display: block;
 	width: 100%;	
