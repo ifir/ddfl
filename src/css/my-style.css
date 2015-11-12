@@ -421,10 +421,10 @@ hr{
 	line-height: 40px;
 }
 .list-select-box .list-label{
-	width: 6%;
+	width: 7%;
 }
 .list-select-box .list-select{
-	width: 94%;
+	width: 93%;
 }
 .list-select-ul{
 	margin: 5px 0;
@@ -863,6 +863,7 @@ hr{
 .sidebar-per-list{
 	border: 0;
 	width: 100%;
+	display: none;
 }
 .per-list-ul li{
 	font-size: 1.2em;
@@ -907,7 +908,9 @@ hr{
 	display: block;
 }
 
-
+.show-per-list{
+	display: block;
+}
 /* ==================================热门话题================================ */
 .tab-ul{
 	background-color: #E4E4E4;
@@ -1081,5 +1084,8 @@ hr{
 	}
 	.nav-li2{
 		width: 100%;		
+	}
+	.list-select-box .list-label, .list-select-box .list-select{
+		width: auto;
 	}
 }

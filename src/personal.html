@@ -52,7 +52,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 col-sm-3 col-xs-12">
-					<div class="sidebar-box sidebar-per-list">
+					<div class="sidebar-box sidebar-per-list show-per-list">
 						<ul class="per-list-ul" id="per-list-ul">
 							<li class="list-cur"><a href="#">我的咨询</a></li>
 							<li><a href="#">我的购买</a></li>
@@ -68,7 +68,17 @@
 
 
 				<div class="col-md-9 col-sm-9 col-xs-12">
-					<div class="sidebar-box sidebar-per-list clearfix">
+
+				<!-- 我的咨询内容开始 -->
+					<div class="sidebar-box sidebar-per-list show-per-list clearfix" id="sidebar-per-list1">
+						<p>我的咨询</p>
+
+					</div><!-- 我的咨询内容结束 -->
+
+
+
+					<!-- 我的购买内容开始 -->
+					<div class="sidebar-box sidebar-per-list clearfix" id="sidebar-per-list2">
 						<ul class="per-buy-ul" id="per-buy-ul">
 							<li class="list-buy-cur"><a href="#">待付款</a></li>
 							<li><a href="#">处理中</a></li>
@@ -134,7 +144,25 @@
 							</div>
 						</div>
 
-					</div>
+					</div><!-- 我的购买内容结束 -->
+
+
+					<!-- 查看帮助内容开始 -->
+					<div class="sidebar-box sidebar-per-list clearfix" id="sidebar-per-list3">
+						<p>查看帮助</p>
+
+					</div><!-- 查看帮助内容结束 -->
+
+
+
+					<!-- 账号设置内容开始 -->
+					<div class="sidebar-box sidebar-per-list clearfix" id="sidebar-per-list4">
+						<p>账号设置</p>
+
+					</div><!-- 账号设置内容结束 -->
+
+
+
 				</div>
 			</div>
 		</div>
@@ -146,16 +174,31 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 	$(function(){
-		//标签切换
-		$('#per-buy-ul li').each(function(index){
+		//我的咨询,我的购买,查看帮助,账号设置标签切换
+		$('#per-list-ul li').each(function(index1){
+			var $sidebarPerList = $('#sidebar-per-list1, #sidebar-per-list2, #sidebar-per-list3, #sidebar-per-list4');
 			$(this).click(function(){
 				var _this = $(this);
-				var $buyCon = $('#per-buy-con1, #per-buy-con2, #per-buy-con3');
-				$('#per-buy-ul li').removeClass('list-buy-cur');
-				$buyCon.removeClass('per-buy-con-cur');
-				_this.addClass('list-buy-cur');
-				$buyCon.eq(index).addClass('per-buy-con-cur');
-			});
+				$('#per-list-ul li').removeClass('list-cur');
+				_this.addClass('list-cur');
+				$sidebarPerList.removeClass('show-per-list');
+				$sidebarPerList.eq(index1).addClass('show-per-list');
+
+				if(index1 == 1){
+					//我的购买切换
+					$('#per-buy-ul li').each(function(index2){
+						$(this).click(function(){
+							var __this = $(this);
+							var $buyCon = $('#per-buy-con1, #per-buy-con2, #per-buy-con3');
+							$('#per-buy-ul li').removeClass('list-buy-cur');
+							$buyCon.removeClass('per-buy-con-cur');
+							__this.addClass('list-buy-cur');
+							$buyCon.eq(index2).addClass('per-buy-con-cur');
+						});
+					});
+					//我的购买切换结束
+				}
+			})
 		})
 	});
 	</script>
