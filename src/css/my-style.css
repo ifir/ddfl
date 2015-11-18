@@ -1045,6 +1045,7 @@ hr{
 .tab-topic-con-info h4{
 	position: relative;
 	font-weight: bolder;
+	padding-right: 70px; 
 }
 .tab-topic-con-info .label{
 	font-size: .7em;
@@ -1082,9 +1083,13 @@ hr{
 	font-size: 1.1em;
 	line-height: 25px;
 }
-.comment-info p{
+.comment-info .icon-box{
 	padding-bottom: 20px;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #eee;
+}
+.comment-info span{
+	margin-left: 20px;
+	color: #777;
 }
 .comment-textarea{
 	position: relative;
