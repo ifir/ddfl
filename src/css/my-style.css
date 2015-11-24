@@ -219,7 +219,7 @@ hr{
 	left: 110px;
 	font-size: .9em;
 	color: #fff;
-	width: 40px;
+	width: 50px;
 	height: 20px;
 	background: #222;
 	text-align: center;
@@ -997,11 +997,43 @@ hr{
 .per-buy-con input{
 	margin-top: 3px;
 }
-.per-buy-con-cur{
-	display: block;
-}
+
 
 .show-per-list{
+	display: block;
+}
+.req-toggle{
+	color: #222;
+	font-size: 16px;
+}
+.req-toggle:hover{
+	color: #222;
+}
+.req-toggle span{
+	color: #ff0000;
+}
+.per-req-con{
+	display: none;
+}
+.per-req-con h4:before{
+	content: 'Q';
+	background-color: #FE9402;
+	padding: 5px 7px;
+}
+.per-req-con .req-toggle:before{
+	content: 'A';
+	background-color: #52C46C;
+	padding: 5px 10px;
+}
+.per-req-con h4:before, .per-req-con .req-toggle:before{
+	display: inline-block;	
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	margin-right: 10px;
+} 
+
+.per-buy-con-cur{
 	display: block;
 }
 /* ==================================热门话题================================ */

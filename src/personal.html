@@ -70,7 +70,82 @@
 
 				<!-- 我的咨询内容开始 -->
 					<div class="sidebar-box sidebar-per-list show-per-list clearfix" id="sidebar-per-list1">
-						<p>我的咨询</p>
+						<div class="per-buy-ul" id="per-req-ul">
+							<ul>
+								<li class="list-buy-cur"><a href="javascript:;">待回答</a></li>
+								<li><a href="javascript:;">已回答</a></li>
+							</ul>
+						</div>
+						<!-- 待回答内容 -->
+						<div class="per-req-con per-buy-con-cur clearfix" id="per-req-con1">
+							<div class="dotted">
+								<h4><strong>快取啦快去啦快取啦快去啦</strong></h4>
+								<div class="col-md-12">
+									<p class="text-muted">您好,我和从大三空间的骄傲啥快递就萨克的卡萨道具卡就流口水的罚款就拉飞机上发的是教师节快乐大山里的骄傲了双方的空间撒放假后付款拉萨的缴费卡那么v您稍等哈V领看is的</p>
+								</div>
+								<div style="margin-bottom:15px;">
+									<a class="req-toggle" data-toggle="collapse" href="#myreq1" aria-expanded="false" aria-controls="myreq1"><strong>向<span>13821555643</span>回答问题</strong></a>
+								</div>
+								<div class="collapse" id="myreq1">
+								  <div class="well clearfix">
+									  <form method="post" action="">
+									  	<div class="form-group comment-textarea">		    
+										    <textarea class="form-control" placeholder="文明上网,参与评论" maxlength="100" rows="4"></textarea>
+												<input type="button" class="btn btn-info" value="发表评论">
+									    </div>
+									    
+									  </form>  
+								  </div>
+							</div>	
+						</div>
+
+
+							<div class="dotted">
+								<h4><strong>快取啦快去啦快取啦快去啦</strong></h4>
+								<div class="col-md-12">
+									<p class="text-muted">您好,我和从大三空间的骄傲啥快递就萨克的卡萨道具卡就流口水的罚款就拉飞机上发的是教师节快乐大山里的骄傲了双方的空间撒放假后付款拉萨的缴费卡那么v您稍等哈V领看is的</p>
+								</div>
+								<div style="margin-bottom:15px;">
+									<a class="req-toggle" data-toggle="collapse" href="#myreq2" aria-expanded="false" aria-controls="myreq2"><strong>向<span>13821555643</span>回答问题</strong></a>
+								</div>
+								<div class="collapse" id="myreq2">
+								  <div class="well clearfix">
+									  <form method="post" action="">
+									  	<div class="form-group comment-textarea">		    
+										    <textarea class="form-control" placeholder="文明上网,参与评论" maxlength="100" rows="4"></textarea>
+												<input type="button" class="btn btn-info" value="发表评论">
+									    </div>
+									    
+									  </form>  
+								  </div>
+								</div>
+							</div>
+
+
+
+						</div>
+
+
+
+
+
+						<!-- 已回答内容 -->
+						<div class="per-req-con clearfix" id="per-req-con2">
+							<div class="dotted clearfix">
+								<h4><strong>快取啦快去啦快取啦快去啦</strong></h4>
+								<div class="col-md-12">
+									<p class="text-muted">您好,我和从大三空间的骄傲啥快递就萨克的卡萨道具卡就流口水的罚款就拉飞机上发的是教师节快乐大山里的骄傲了双方的空间撒放假后付款拉萨的缴费卡那么v您稍等哈V领看is的</p>
+								</div>
+								<div style="margin-bottom:10px;">
+									<a class="req-toggle" href="javascript:;"><strong>向<span>13821555643</span>回答问题</strong></a>
+									
+								</div>
+								<div class="col-md-12">
+									<p class="text-muted">您好,我和从大三空间的骄傲啥快递就萨克的卡萨道具卡就流口水的罚款就拉飞机上发的是教师节快乐大山里的骄傲了双方的空间撒放假后付款拉萨的缴费卡那么v您稍等哈V领看is的</p>
+								</div>
+							</div>	
+						</div>
+
 
 					</div><!-- 我的咨询内容结束 -->
 
@@ -79,9 +154,9 @@
 					<!-- 我的购买内容开始 -->
 					<div class="sidebar-box sidebar-per-list clearfix" id="sidebar-per-list2">
 						<ul class="per-buy-ul" id="per-buy-ul">
-							<li class="list-buy-cur"><a href="#">待付款</a></li>
-							<li><a href="#">处理中</a></li>
-							<li><a href="#">已完成</a></li>
+							<li class="list-buy-cur"><a href="javascript:;">待付款</a></li>
+							<li><a href="javascript:;">处理中</a></li>
+							<li><a href="javascript:;">已完成</a></li>
 						</ul>
 
 						<!-- 待付款内容 -->
@@ -199,6 +274,21 @@
 				}
 			})
 		})
+
+		//我的回答
+
+		$('#per-req-ul li').each(function(index){
+			$(this).click(function(){
+				var __this = $(this);
+				var $reqCon = $('#per-req-con1, #per-req-con2');
+				$('#per-req-ul li').removeClass('list-buy-cur');
+				$reqCon.removeClass('per-buy-con-cur');
+				__this.addClass('list-buy-cur');
+				$reqCon.eq(index).addClass('per-buy-con-cur');
+			});
+		});
+
+
 	});
 	</script>
 </body>
