@@ -86,7 +86,7 @@ hr{
 	border-top:1px solid #E5E5E5;
 }
 .text-red{
-	color: #ff0000;
+	color: #ff0000!important;
 }
 .dotted{
 	border: none;
@@ -369,7 +369,6 @@ hr{
 /* ==============================登陆、注册页面======================== */
 .login-box{
 	width: 398px;
-	height: 448px;
 	border: 1px solid #ccc;
 	background-color: #fff;
 }
@@ -391,7 +390,6 @@ hr{
 }
 .login-center{
 	width: 90%;
-	height: 400px;
 	margin: 25px 15px;
 }
 .login-center>h1{
@@ -1174,6 +1172,52 @@ hr{
 	-ms-transform:rotate3d(0, 0, 1, 45deg);
 	-o-transform:rotate3d(0, 0, 1, 45deg);
 	transform:rotate3d(0, 0, 1, 45deg);
+}
+/* =============================关于我们========================== */
+.about-box p{
+	color: #5C5C5C;
+}
+.about-p{
+	margin: 20px 0;
+}
+.about-p p{
+	font-size: 15px;
+	line-height: 1.5;
+	text-indent: 16px;	
+}
+.about-p dd{
+	padding: 10px 30px;
+}
+.about-p dd:before{
+	content: '';
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: #222;
+	margin-right: 10px;
+	vertical-align: middle;
+	margin-top: -1px;
+	
+}
+/* ===========================表单验证样式======================== */
+.val-error{
+	border: 1px solid #FA1414;
+}
+.val-success{
+	border: 1px solid #14B33A;
+}
+.val-error:focus{
+	border-color: #FA1414;
+	box-shadow: inset 0 1px 1px #FF6A6A,0 0 8px #FF2F2F;
+}
+.val-success:focus{
+	border-color: #14B33A;
+	box-shadow: inset 0 1px 1px #99FFB1,0 0 8px #38FF68;
+}
+.msg-error{
+	display: none;
+	text-align: center;
 }
 /* ===========================media媒体查询======================= */
 @media screen and (max-width: 400px){

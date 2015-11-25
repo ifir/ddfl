@@ -8,6 +8,9 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/my-style.css">
+	<!--[if lt IE 9]> 
+		<script> src="js/html5shiv.min.js"></script> 
+	<![endif]-->
 </head>
 <body>
 	<!-- 导航栏 -->
@@ -57,15 +60,17 @@
 							<p class="p-liner">使用滴法账号登录</p>
 							<form action="" method="post">
 								<div class="form-box">
-									<input class="input-default" type="text" placeholder="请输入手机号或邮箱" name="user" />
+									<input id="username" class="input-default" type="text" placeholder="请输入手机号或邮箱" name="user" maxlength="11" />
 									<i class="icon icon-phone"></i>
+									<p id="tel-error" class="msg-error text-red"></p>
 								</div>
 								<div class="form-box">
-									<input class="input-default" type="password" placeholder="请输入密码" name="password" />
+									<input id="password" class="input-default" type="password" placeholder="请输入密码" name="password" maxlength="20" />
 									<i class="icon icon-lock"></i>
+									<p id="psd-error" class="msg-error text-red"></p>
 								</div>
 								<a class="forget" href="#">忘记密码?</a>
-								<input class="btn-large" type="button" value="登&nbsp;&nbsp;录" style="	margin-bottom: 20px;">
+								<input id="login-btn" class="btn-large" type="button" value="登&nbsp;&nbsp;录" style="	margin-bottom: 20px;">
 								<p class="p-liner">使用社交账号登录</p>
 								<div class="row">
 									<div class="col-sm-12 col-xs-12 text-center">
@@ -85,5 +90,73 @@
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			var $userName = $('#username'),
+					$userPsd = $('#password'),
+					flagTel = false,
+					flagPsd = false;
+			//手机验证
+			$userName.bind('input propertychange', function() {
+				var telReg = /^13[0-9]{1}[0-9]{8}|^18[0-9]{1}[0-9]{8}|^15[0-9]{1}[0-9]{8}|^17[0-9]{1}[0-9]{8}$/;
+				$tel = $userName.val();
+				var errorMsg = $('#tel-error');
+				$userName.removeClass('val-success');
+				$userName.addClass('val-error');
+				if($tel == null || $tel == ''){//判断是否为空
+					errorMsg.show().text("手机号不能为空!");
+				}else if(!telReg.test($tel)){
+						errorMsg.show().text("手机号不正确!");			
+				}else{
+					$userName.removeClass('val-error');
+					$userName.addClass('val-success');
+					errorMsg.hide();
+					flagTel = true;	
+			
+				}
+
+				
+			})//手机验证结束
+
+			//密码验证
+			$userPsd.bind('input propertychange', function() {
+				$psd = $userPsd.val();
+				var errorMsg = $('#psd-error');
+				$userPsd.removeClass('val-success');
+				$userPsd.addClass('val-error');
+				if($psd == null || $psd == ''){
+					errorMsg.show().text("密码不能为空!");
+				}else if($psd.length < 6){
+					errorMsg.show().text("密码长度要大于6个字符");
+				}else{
+					$userPsd.removeClass('val-error');
+					$userPsd.addClass('val-success');
+					errorMsg.hide();
+					flagPsd = true;				
+				}
+
+				
+			})//密码验证结束
+
+			//提交表单
+			$('#login-btn').on('click', function(){
+				if(flagTel && flagPsd){
+					$.ajax({
+						url: "",
+						type: "post",
+						data: {username : $tel,
+									 password : $psd
+						},
+						success: function(data){
+							location.href= "";
+						}
+					})//ajax end
+				}
+			})
+
+
+		})
+	</script>
 </body>
 </html>
