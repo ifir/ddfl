@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>登录</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -90,73 +90,6 @@
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript">
-		$(function(){
-
-			var $userName = $('#username'),
-					$userPsd = $('#password'),
-					flagTel = false,
-					flagPsd = false;
-			//手机验证
-			$userName.bind('input propertychange', function() {
-				var telReg = /^13[0-9]{1}[0-9]{8}|^18[0-9]{1}[0-9]{8}|^15[0-9]{1}[0-9]{8}|^17[0-9]{1}[0-9]{8}$/;
-				$tel = $userName.val();
-				var errorMsg = $('#tel-error');
-				$userName.removeClass('val-success');
-				$userName.addClass('val-error');
-				if($tel == null || $tel == ''){//判断是否为空
-					errorMsg.show().text("手机号不能为空!");
-				}else if(!telReg.test($tel)){
-						errorMsg.show().text("手机号不正确!");			
-				}else{
-					$userName.removeClass('val-error');
-					$userName.addClass('val-success');
-					errorMsg.hide();
-					flagTel = true;	
-			
-				}
-
-				
-			})//手机验证结束
-
-			//密码验证
-			$userPsd.bind('input propertychange', function() {
-				$psd = $userPsd.val();
-				var errorMsg = $('#psd-error');
-				$userPsd.removeClass('val-success');
-				$userPsd.addClass('val-error');
-				if($psd == null || $psd == ''){
-					errorMsg.show().text("密码不能为空!");
-				}else if($psd.length < 6){
-					errorMsg.show().text("密码长度要大于6个字符");
-				}else{
-					$userPsd.removeClass('val-error');
-					$userPsd.addClass('val-success');
-					errorMsg.hide();
-					flagPsd = true;				
-				}
-
-				
-			})//密码验证结束
-
-			//提交表单
-			$('#login-btn').on('click', function(){
-				if(flagTel && flagPsd){
-					$.ajax({
-						url: "",
-						type: "post",
-						data: {username : $tel,
-									 password : $psd
-						},
-						success: function(data){
-							location.href= "";
-						}
-					})//ajax end
-				}
-			})
-
-
-		})
-	</script>
+	<script type="text/javascript" src="js/verify.js"></script>
 </body>
 </html>
