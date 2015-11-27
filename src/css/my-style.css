@@ -995,8 +995,6 @@ hr{
 .per-buy-con input{
 	margin-top: 3px;
 }
-
-
 .show-per-list{
 	display: block;
 }
@@ -1021,7 +1019,7 @@ hr{
 .per-req-con .req-toggle:before{
 	content: 'A';
 	background-color: #52C46C;
-	padding: 5px 10px;
+	padding: 4px 9px;
 }
 .per-req-con h4:before, .per-req-con .req-toggle:before{
 	display: inline-block;	
@@ -1033,6 +1031,9 @@ hr{
 
 .per-buy-con-cur{
 	display: block;
+}
+.btn-position{
+	margin: -2px 0 0 20px;
 }
 /* ==================================热门话题================================ */
 .tab-ul{

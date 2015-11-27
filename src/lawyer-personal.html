@@ -69,9 +69,10 @@
 
 				<!-- 我的咨询内容开始 -->
 					<div class="sidebar-box sidebar-per-list show-per-list clearfix" id="sidebar-per-list1">
-						<div class="per-buy-ul">
+						<div class="per-buy-ul" id="per-req-ul">
 							<ul>
-								<li class="list-buy-cur"><a href="javascript:;">回答问题</a></li>
+								<li class="list-buy-cur"><a href="javascript:;">待回答</a></li>
+								<li><a href="javascript:;">已回答</a></li>
 							</ul>
 						</div>
 						<!-- 待回答内容 -->
@@ -82,15 +83,20 @@
 									<p class="text-muted">您好,我和从大三空间的骄傲啥快递就萨克的卡萨道具卡就流口水的罚款就拉飞机上发的是教师节快乐大山里的骄傲了双方的空间撒放假后付款拉萨的缴费卡那么v您稍等哈V领看is的</p>
 								</div>
 								<div style="margin-bottom:15px;">
-									<a class="req-toggle" href="javascript:;"><strong><span>我</span></strong></a>
+									<a class="req-toggle" href="javascript:;"><strong><span>我</span></strong></a><input type="button" class="btn btn-default btn-xs btn-position" value="立即回答" data-toggle="collapse" data-target="#my-req1" aria-expanded="false" aria-controls="my-req1">
 								</div>
-								<form method="post" action="">
-							  	<div class="form-group comment-textarea">		    
-								    <textarea class="form-control" placeholder="文明上网,参与评论" maxlength="100" rows="4"></textarea>
-										<input type="button" class="btn btn-info" value="发表评论">
-							    </div>
-							    
-							  </form>  
+								<div class="collapse" id="my-req1">
+								  <div class="well">
+								    <form method="post" action="">
+									  	<div class="form-group comment-textarea">		    
+										    <textarea class="form-control" placeholder="文明上网,参与评论" maxlength="100" rows="4"></textarea>
+												<input type="button" class="btn btn-info" value="发表评论">
+									    </div>
+									    
+									  </form>  
+								  </div>
+								</div>
+								
 							</div>
 
 
@@ -100,15 +106,19 @@
 									<p class="text-muted">您好,我和从大三空间的骄傲啥快递就萨克的卡萨道具卡就流口水的罚款就拉飞机上发的是教师节快乐大山里的骄傲了双方的空间撒放假后付款拉萨的缴费卡那么v您稍等哈V领看is的</p>
 								</div>
 								<div style="margin-bottom:15px;">
-									<a class="req-toggle" href="javascript:;"><strong><span>我</span></strong></a>
+									<a class="req-toggle" href="javascript:;"><strong><span>我</span></strong></a><input type="button" class="btn btn-default btn-xs btn-position" value="立即回答" data-toggle="collapse" data-target="#my-req2" aria-expanded="false" aria-controls="my-req2">
 								</div>
-								<form method="post" action="">
-							  	<div class="form-group comment-textarea">		    
-								    <textarea class="form-control" placeholder="文明上网,参与评论" maxlength="100" rows="4"></textarea>
-										<input type="button" class="btn btn-info" value="发表评论">
-							    </div>
-							    
-							  </form>  
+								<div class="collapse" id="my-req2">
+								  <div class="well">
+								    <form method="post" action="">
+									  	<div class="form-group comment-textarea">		    
+										    <textarea class="form-control" placeholder="文明上网,参与评论" maxlength="100" rows="4"></textarea>
+												<input type="button" class="btn btn-info" value="发表评论">
+									    </div>
+									    
+									  </form>  
+								  </div>
+								</div>
 							</div>
 
 
@@ -136,8 +146,26 @@
 							</div>	
 						</div>
 
+						
+						<!-- 已回答内容 -->
+						<div class="per-req-con clearfix" id="per-req-con2">
+							<div class="dotted clearfix">
+								<h4><strong>快取啦快去啦快取啦快去啦</strong></h4>
+								<div class="col-md-12">
+									<p class="text-muted">您好,我和从大三空间的骄傲啥快递就萨克的卡萨道具卡就流口水的罚款就拉飞机上发的是教师节快乐大山里的骄傲了双方的空间撒放假后付款拉萨的缴费卡那么v您稍等哈V领看is的</p>
+								</div>
+								<div style="margin-bottom:10px;">
+									<a class="req-toggle" href="javascript:;"><strong>向<span>13821555643</span>回答问题</strong></a>
+									
+								</div>
+								<div class="col-md-12">
+									<p class="text-muted">您好,我和从大三空间的骄傲啥快递就萨克的卡萨道具卡就流口水的罚款就拉飞机上发的是教师节快乐大山里的骄傲了双方的空间撒放假后付款拉萨的缴费卡那么v您稍等哈V领看is的</p>
+								</div>
+							</div>	
+						</div>	
 
-					</div><!-- 我的咨询内容结束 -->
+
+					</div><!-- 我的回答内容结束 -->
 
 
 
@@ -235,5 +263,46 @@
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//我的咨询,我的购买,查看帮助,账号设置标签切换
+			$('#per-list-ul li').each(function(index1){
+				var $sidebarPerList = $('#sidebar-per-list1, #sidebar-per-list2, #sidebar-per-list3, #sidebar-per-list4');
+				$(this).click(function(){
+					var _this = $(this);
+					$('#per-list-ul li').removeClass('list-cur');
+					_this.addClass('list-cur');
+					$sidebarPerList.removeClass('show-per-list');
+					$sidebarPerList.eq(index1).addClass('show-per-list');
+
+					if(index1 == 1){
+						//我的购买切换
+						$('#per-buy-ul li').each(function(index2){
+							$(this).click(function(){
+								var __this = $(this);
+								var $buyCon = $('#per-buy-con1, #per-buy-con2, #per-buy-con3');
+								$('#per-buy-ul li').removeClass('list-buy-cur');
+								$buyCon.removeClass('per-buy-con-cur');
+								__this.addClass('list-buy-cur');
+								$buyCon.eq(index2).addClass('per-buy-con-cur');
+							});
+						});
+						//我的购买切换结束
+					}
+				})
+			})
+			
+			$('#per-req-ul li').each(function(index){
+				$(this).click(function(){
+					var __this = $(this);
+					var $reqCon = $('#per-req-con1, #per-req-con2');
+					$('#per-req-ul li').removeClass('list-buy-cur');
+					$reqCon.removeClass('per-buy-con-cur');
+					__this.addClass('list-buy-cur');
+					$reqCon.eq(index).addClass('per-buy-con-cur');
+				});
+			});
+		})
+	</script>
 </body>
 </html>
