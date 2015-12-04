@@ -209,7 +209,85 @@
 
 					<!-- 账号设置内容开始 -->
 					<div class="sidebar-box sidebar-per-list clearfix" id="sidebar-per-list4">
-						<p>账号设置</p>
+						<form class="form-horizontal" action="" method="post">
+							<div class="form-group">
+						    <label class="col-sm-2 control-label">账号</label>
+						    <div class="col-sm-4">
+						      <p class="form-control-static">13821555643</p>
+						      <a href="javascript:;" class="form-control-static text-red" data-toggle="modal" data-target="#changepsd">修改密码</a>
+						    </div>
+						  </div>
+							<div class="form-group">
+								<label for="petname" class="col-sm-2 control-label">昵称</label>
+								<div class="col-sm-4">
+									<input id="petname" class="form-control" placeholder="请输入原密码" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label">性别</label>
+								<div class="col-md-4">	
+								  <label class="radio-inline" style="margin-right:30px;">
+								    <input type="radio" name="sex" id="man" value="1" checked>男							    
+								  </label>
+								  <label class="radio-inline">
+								    <input type="radio" name="sex" id="woman" value="2">女							    
+								  </label>	
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label">地区</label>
+								<div class="col-sm-2">
+									 <select class="form-control" name="">
+									  <option>天津</option>
+									  <option>北京</option>
+									  <option>河北省</option>
+									</select>
+								</div>
+								<div class="col-sm-2">
+									 <select class="form-control" name="">
+									  <option>和平区</option>
+									  <option>河北区</option>
+									  <option>河西区</option>
+									</select>
+								</div>
+						 </div>
+						 <div class="form-group">
+					     <label for="email" class="col-sm-2 control-label">邮箱</label>
+					     <div class="col-sm-4">
+					       <input type="text" class="form-control" id="email" placeholder="请填写邮箱" value="664339636@qq.com" name="">
+					     </div>
+					   </div>
+					   <div class="form-group">
+						    <div class="col-sm-offset-2 col-sm-10">
+						      <button type="submit" class="btn btn-black">保存</button>
+						    </div>
+						  </div>
+						</form>
+						<!-- <form class="form-horizontal" action="" method="post">
+							<div class="form-group">
+								<label for="oldpsd" class="col-sm-2 control-label">原密码</label>
+								<div class="col-sm-4">
+									<input id="oldpsd" class="form-control" placeholder="请输入原密码" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="newpsd" class="col-sm-2 control-label">新密码</label>
+								<div class="col-sm-4">
+									<input id="newpsd" class="form-control" placeholder="请输入新密码" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="repeatpsd" class="col-sm-2 control-label">确认密码</label>
+								<div class="col-sm-4">
+									<input id="repeatpsd" class="form-control" placeholder="请重新输入新密码" name="">
+								</div>
+							</div>
+							<div class="form-group">
+						    <div class="col-sm-offset-2 col-sm-10">
+						      <button type="submit" class="btn btn-black">保存</button>
+						    </div>
+						  </div>
+						</form> -->
 
 					</div><!-- 账号设置内容结束 -->
 
@@ -219,8 +297,50 @@
 			</div>
 		</div>
 	</section>
-
-
+	<!-- 修改密码弹出框 -->
+	<div id="changepsd" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="gridSystemModalLabel">修改密码</h4>
+      </div>
+      <form class="form-horizontal" action="" method="post">
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            
+							<div class="form-group">
+								<label for="oldpsd" class="col-sm-3 control-label">原密码</label>
+								<div class="col-sm-6">
+									<input id="oldpsd" class="form-control" placeholder="请输入原密码" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="newpsd" class="col-sm-3 control-label">新密码</label>
+								<div class="col-sm-6">
+									<input id="newpsd" class="form-control" placeholder="请输入新密码" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="repeatpsd" class="col-sm-3 control-label">确认密码</label>
+								<div class="col-sm-6">
+									<input id="repeatpsd" class="form-control" placeholder="请重新输入新密码" name="">
+								</div>
+							</div>
+						
+          </div>
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">修改</button>
+      </div>
+      </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>

@@ -1035,6 +1035,20 @@ hr{
 .btn-position{
 	margin: -2px 0 0 20px;
 }
+.sidebar-per-list label{
+	font-size: 1em;
+}
+.sidebar-per-list .form-group{
+	margin-bottom:15px;
+}
+.sidebar-per-list .btn-black{
+	font-size: 16px;
+}
+.sidebar-per-list a.form-control-static{
+	position: absolute;
+	right: 15px;
+	top: 0;
+}
 /* ==================================热门话题================================ */
 .tab-ul{
 	background-color: #E4E4E4;
@@ -1132,6 +1146,7 @@ hr{
 	right: 10px;
 	z-index: 20;
 }
+
 /* =============================付费产品========================== */
 .pay-product-box h3{
 	margin-bottom: 20px;
