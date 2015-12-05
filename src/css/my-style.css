@@ -1216,6 +1216,12 @@ hr{
 	margin-top: -1px;
 	
 }
+.disc-li{
+	list-style-type: disc;
+	font-size: 1em;
+	color: #5C5C5C;
+	line-height: 25px;
+}
 /* ===========================表单验证样式======================== */
 .val-error{
 	border: 1px solid #FA1414;
@@ -1235,6 +1241,13 @@ hr{
 	display: none;
 	text-align: center;
 }
+.sidebar-per-list form label{
+	margin: 10px 0;
+}
+.about-box .sidebar-per-list .form-group{
+	margin-bottom: 5px;
+}
+
 /* ===========================media媒体查询======================= */
 @media screen and (max-width: 400px){
 	.login-box{
