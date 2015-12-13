@@ -10,7 +10,7 @@
 	font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+body,[class^="icon-"], [class*=" icon-"] {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -78,6 +78,7 @@ p, ul a{
 ul{
 	margin-bottom: 0;
 	list-style-type:none;
+	padding-left: 0;
 }
 hr{
 	position: relative;
@@ -87,6 +88,9 @@ hr{
 }
 .text-red{
 	color: #ff0000!important;
+}
+.text-primary{
+	color:#1C8FFF;
 }
 .dotted{
 	border: none;
@@ -314,8 +318,95 @@ hr{
 .text-right>a:hover{
 	color: #222;
 }
+/* ===================================评价展示========================== */
+.review-show{
+	background: url(../img/bg1.jpg) no-repeat center center;
+	background-size: cover;
+	height: 500px;
+	margin: 30px 0 0 0;
+	position: relative;
+}
+.review-show .container-fluid{
+	height: 500px;
+	background: rgba(0,0,0,.7);
+}
+.review-show h2{
+	margin-top: 30px;
+}
+.review-show p{
+	margin-top: 30px;
+	font-size: 18px;
+	color: #ccc;
+}
+.review-show img{
+	margin-top: 50px;
+}
+.span-box{
+	width: 120px;	
+	margin: 30px auto 20px auto;
+}
+.span-box span{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #fff;
+	background: transparent;
+	cursor: pointer;
+}
+.span-box .now{
+	background: #1C8FFF;
+	border: 1px solid #1C8FFF;
+}
+.artfont{
+	background: url(../img/artfont.png) #fff no-repeat center center;
+	background-size: 415px 65px;
+	height: 100px;
+	width: 100%;
+}
+/* ==================================首页关于我们============================*/
+.about-us{
+	background: rgba(0,0,0,.8);
+	position: relative;
+}
+.cut-line:after{
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 20px;
+	width: 1px;
+	height: 125px;
+	background: rgba(77, 77, 77, 0.35);
+}
+.about-us .about-list{
+	width: 20%;	
+	margin:20px 0;
 
+}
+.about-list li{
+	line-height: 25px;
+}
+.about-list li a{
+	color: #ccc;
+}
+.about-list li:first-child a{
+	color: #fff;
+}
+.work-time h2, .work-time p{
+	color: #ccc;
+}
+.work-time li{
+	float: left;
+	width: 25%;
+}
+.weixin-about p{
+	color: #ccc;
+	margin-top: 10px;
+}
+.weixin-about{
+	margin-top: 20px;
+}
 /* =================================footer================================== */
+
 .nav-li1{
 	width: 100%;
 	height: 30px;
@@ -330,12 +421,12 @@ hr{
 	font-size: 1em;
 }
 .nav-li2{
-	width: 550px;
+	width: 320px;
 	padding: 10px 0;
 }
 .nav-li2 ul li{
 	float: left;
-	width: 25%;	
+	width: 33.333333%;	
 	font-size: 1em;	
 }
 .nav-li2 ul li:first-child, 
@@ -364,6 +455,9 @@ hr{
 	font-size: 1.2em;
 	color: #222;
 	font-weight: bolder;
+}
+.low-download .btn-default{
+	background: ;
 }
 
 /* ==============================登陆、注册页面======================== */
@@ -1270,9 +1364,6 @@ hr{
 	}
 	.pic-grids{
 		margin: 5px;
-	}
-	.about-us-grids{
-		margin-bottom: 10px;
 	}
 	.nav-li2 ul li{
 		font-size: .9em;
